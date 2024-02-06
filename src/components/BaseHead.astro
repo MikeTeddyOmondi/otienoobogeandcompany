@@ -1,47 +1,82 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import '../styles/global.css';
+import "../styles/global.css";
 
 interface Props {
-	title: string;
-	description: string;
-	image?: string;
+  title: string;
+  description: string;
+  image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 ---
 
 <!-- Global Metadata -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<meta name="generator" content={Astro.generator} />
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width,initial-scale=1' />
+<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+<meta name='generator' content={Astro.generator} />
 
 <!-- Font preloads -->
-<link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
-<link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin />
+<link
+  rel='preload'
+  href='/fonts/atkinson-regular.woff'
+  as='font'
+  type='font/woff'
+  crossorigin
+/>
+<link
+  rel='preload'
+  href='/fonts/atkinson-bold.woff'
+  as='font'
+  type='font/woff'
+  crossorigin
+/>
 
 <!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
+<link rel='canonical' href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
+<meta name='title' content={title} />
+<meta name='description' content={description} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
+<!-- <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={new URL(image, Astro.url)} /> -->
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
+<!-- <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} /> -->
+
+<meta charset='utf-8' />
+<meta
+  name='viewport'
+  content='width=device-width, initial-scale=1, shrink-to-fit=no'
+/>
+<meta name='description' content='' />
+<meta name='author' content='TemplateMo' />
+<link
+  href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap'
+  rel='stylesheet'
+/>
+
+<title>Otieno Oboge & Co.</title>
+
+<!-- Bootstrap core CSS -->
+<link href='/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet' />
+
+<!-- Additional CSS Files -->
+<link rel='stylesheet' href='/assets/css/fontawesome.css' />
+<link rel='stylesheet' href='/assets/css/templatemo-finance-business.css' />
+<link rel='stylesheet' href='/assets/css/owl.css' />
+<!-- Finance Business TemplateMo https://templatemo.com/tm-545-finance-business -->
